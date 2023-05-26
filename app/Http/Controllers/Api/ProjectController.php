@@ -23,15 +23,15 @@ class ProjectController extends Controller
 
         $project = Project::where('slug', $slug)->with('type','technologies')->first();
 
-        if(!$project){
+        if($project){
             return response()->json([
                 'success' => true,
-                'result' => $project
+                'results' => $project
             ]);
         } else {
             return response()->json([
                 'success' => false,
-                'result' => null
+                'results' => null
             ], 404);
         }
     }
