@@ -23,7 +23,7 @@ class TechnologyContoller extends Controller
 
         return response()->json([
             'success' => true,
-            'results' => $technology
+            'result' => $technology
         ]);
 
     }
