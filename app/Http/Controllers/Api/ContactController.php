@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Api;
 
 
 use App\Http\Controllers\Controller;
+use App\Mail\newContact;
 use App\Models\Contact;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -25,6 +26,8 @@ class ContactController extends Controller
         $newContact->message = $data['message'];
 
         $newContact->save();
+
+        Mail::to('maurizio@gmail.it')->send(new newContact($newContact));
 
         return $newContact;
     }
