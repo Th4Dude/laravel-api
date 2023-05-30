@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\TypeController;
 use App\Http\Controllers\Api\TechnologyController;
@@ -30,3 +31,5 @@ use Illuminate\Support\Facades\Route;
 
  Route::get('technologies', [TechnologyController::class, 'index']);
  Route::get('technologies/{slug}', [TechnologyController::class, 'show']);
+
+ Route::post('contacts', [ContactController::class, 'store']);

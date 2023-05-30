@@ -22,6 +22,9 @@
                         <div>
                             <a class="nav-link" href="{{ Route('admin.projects.create') }}">{{ __('Create New Project') }}</a>
                         </div>
+                        <div>
+                            <a class="nav-link" href="{{ Route('admin.contacts.index') }}">{{ __('Contacts') }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
