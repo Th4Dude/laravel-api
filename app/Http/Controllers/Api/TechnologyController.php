@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Technology;
 use Illuminate\Http\Request;
 
-class TechnologyContoller extends Controller
+class TechnologyController extends Controller
 {
     public function index() {
 
